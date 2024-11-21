@@ -21,6 +21,10 @@ The game allows a user to play Rock, Paper, Scissors against the computer. The u
   - `"Computer won 😭"` if the computer wins.
 6. Choose to play again or exit the game.
 
+## Demo Video
+
+https://github.com/user-attachments/assets/4c243a51-24cb-44d6-bf50-99f61b11f8d7
+
 ## Code
 
 ```javascript
