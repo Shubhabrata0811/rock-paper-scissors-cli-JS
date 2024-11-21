@@ -24,9 +24,11 @@ The game allows a user to play Rock, Paper, Scissors against the computer. The u
 ## Code
 
 ```javascript
+//Rock, Paper, Scissors
+
 const ROCK = 1;
 const PAPER = 2;
-const SCISSOR = 3;
+const SCISSORS = 3;
 const INVALIDCHOICE = "Invalid Input❗";
 const TIE = 0;
 const USERWON = 1;
@@ -34,19 +36,19 @@ const COMPUTERWON = 2;
 
 function getChoiceVisual(choice) {
   switch (choice) {
-   case ROCK:
-    return "🪨";
-   case PAPER:
-    return "📰";
-   case SCISSOR:
-    return "✂️";
-   default:
-    return INVALIDCHOICE;
+    case ROCK:
+      return "🪨";
+    case PAPER:
+      return "📰";
+    case SCISSORS:
+      return "✂️";
+    default:
+      return INVALIDCHOICE;
   }
 }
 
 function generateComputerChoice() {
-  const randomChoice = Math.round(Math.random() * 100) % 3 + 1;
+  const randomChoice = (Math.round(Math.random() * 100) % 3) + 1;
   let choiceVisual = getChoiceVisual(randomChoice);
 
   console.log("Computer has chosen: " + choiceVisual);
@@ -56,28 +58,28 @@ function generateComputerChoice() {
 
 function userChoice() {
   const userInput = +prompt(
-   "Enter " +
-    ROCK +
-    " for Rock 🪨\nEnter " +
-    PAPER +
-    " for paper 📰\nEnter " +
-    SCISSOR +
-    " for scissor ✂️\nChoice:"
+    "Enter " +
+      ROCK +
+      " for Rock 🪨\nEnter " +
+      PAPER +
+      " for paper 📰\nEnter " +
+      SCISSORS +
+      " for scissors ✂️\nChoice:"
   );
 
   let choiceVisual = getChoiceVisual(userInput);
 
   if (choiceVisual === INVALIDCHOICE) {
-   console.clear();
-   console.log(choiceVisual);
-   return userChoice();
+    console.clear();
+    console.log(choiceVisual);
+    return userChoice();
   }
 
   console.log("You choose " + choiceVisual);
 
   if (!confirm("Please confirm your Choice:")) {
-   console.clear();
-   return userChoice();
+    console.clear();
+    return userChoice();
   }
 
   return userInput;
@@ -85,12 +87,12 @@ function userChoice() {
 
 function generateResultMsg(result) {
   switch (result) {
-   case TIE:
-    return "It's a tie ⚠️";
-   case USERWON:
-    return "You won 🥳";
-   case COMPUTERWON:
-    return "Computer won 😭";
+    case TIE:
+      return "It's a tie ⚠️";
+    case USERWON:
+      return "You won 🥳";
+    case COMPUTERWON:
+      return "Computer won 😭";
   }
 }
 
@@ -106,8 +108,8 @@ function game() {
   gameResult(userChoose, computerChoose);
 
   if (confirm("Want to play again❓ : ")) {
-   console.clear();
-   game();
+    console.clear();
+    game();
   }
 }
 
