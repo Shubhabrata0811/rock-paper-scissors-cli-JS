@@ -10,15 +10,15 @@ The game allows a user to play Rock, Paper, Scissors against the computer. The u
 
 1. Run the script in a JavaScript runtime environment that supports `prompt` and `confirm` functions (e.g. deno).
 2. Follow the prompts to enter your choice:
-  - Enter `1` for Rock 🪨
-  - Enter `2` for Paper 📰
-  - Enter `3` for Scissors ✂️
+  - Enter `1` for Rock `🪨`
+  - Enter `2` for Paper `📰`
+  - Enter `3` for Scissors `✂️`
 3. Confirm your choice when prompted.
 4. The computer will randomly select its choice.
 5. The result of the game will be displayed:
-  - "It's a tie ⚠️" if both choices are the same.
-  - "You won 🥳" if the user wins.
-  - "Computer won 😭" if the computer wins.
+  - `"It's a tie ⚠️"` if both choices are the same.
+  - `"You won 🥳"` if the user wins.
+  - `"Computer won 😭"` if the computer wins.
 6. Choose to play again or exit the game.
 
 ## Code
