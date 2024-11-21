@@ -1,8 +1,8 @@
-//Rock, Paper, Scissor
+//Rock, Paper, Scissors
 
 const ROCK = 1;
 const PAPER = 2;
-const SCISSOR = 3;
+const SCISSORS = 3;
 const INVALIDCHOICE = "Invalid Input❗";
 const TIE = 0;
 const USERWON = 1;
@@ -14,7 +14,7 @@ function getChoiceVisual(choice) {
       return "🪨";
     case PAPER:
       return "📰";
-    case SCISSOR:
+    case SCISSORS:
       return "✂️";
     default:
       return INVALIDCHOICE;
@@ -37,8 +37,8 @@ function userChoice() {
       " for Rock 🪨\nEnter " +
       PAPER +
       " for paper 📰\nEnter " +
-      SCISSOR +
-      " for scissor ✂️\nChoice:"
+      SCISSORS +
+      " for scissors ✂️\nChoice:"
   );
 
   let choiceVisual = getChoiceVisual(userInput);
